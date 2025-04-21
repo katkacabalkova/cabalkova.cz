@@ -41,10 +41,10 @@ export default function Home() {
           <div className="relative">
             <div className="absolute -top-10 -left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl"></div>
-            <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden aspect-square">
+            <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden aspect-[4/3]">
               <Image
-                src="/images/about-image.png"
-                alt="Kateřina Cabalková v terapeutické praxi"
+                src="/images/talk-with-katerina.jpg"
+                alt="Kateřina Cabalková, psychoterapeutka, přednáší o komunikaci ve vztazích"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -87,15 +87,16 @@ export default function Home() {
               { title: "Zážitková terapie", icon: <Brain className="w-6 h-6" /> },
               { title: "Důvěrnost", icon: <CheckCircle2 className="w-6 h-6" /> },
             ].map((value, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center card-hover"
-              >
-                <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
-                  {value.icon}
+              <Link href="/o-katerine" key={index} className="block">
+                <div
+                  className="bg-white p-6 rounded-xl shadow-md border border-gray-100 text-center card-hover h-full"
+                >
+                  <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
+                    {value.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800">{value.title}</h3>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-800">{value.title}</h3>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

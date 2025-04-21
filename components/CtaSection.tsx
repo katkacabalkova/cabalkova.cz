@@ -26,7 +26,7 @@ export default function CtaSection({
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={primaryButtonLink}
-              className="bg-gray-800 text-white hover:bg-gray-700 font-medium py-3 px-8 rounded-lg transition-colors inline-block shadow-md"
+              className="bg-white text-primary-dark hover:bg-gray-100 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 font-medium py-3 px-8 rounded-lg transition-colors inline-block shadow-md"
             >
               {primaryButtonText}
             </Link>

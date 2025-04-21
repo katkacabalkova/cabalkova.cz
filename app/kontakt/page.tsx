@@ -78,7 +78,11 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-1">Adresa</h3>
-                  <p className="text-gray-700">Ostrovní 30, Praha 1</p>
+                  <p className="text-gray-700">
+                    <a href="https://maps.google.com/?q=Ostrovní+30,+Praha+1" target="_blank" rel="noopener noreferrer">
+                      Ostrovní 30, Praha 1
+                    </a>
+                  </p>
                 </div>
               </div>
 
@@ -235,7 +239,10 @@ export default function ContactPage() {
       {/* Map Section */}
       <section className="py-16 px-6 md:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <SectionHeader title="Kde mě najdete" centered />
+          {/* Added wrapper div with id for anchor linking */}
+          <div id="kde-me-najdete">
+            <SectionHeader title="Kde mě najdete" centered />
+          </div>
 
           <div className="bg-white h-96 rounded-2xl shadow-lg overflow-hidden flex items-center justify-center relative">
             <iframe

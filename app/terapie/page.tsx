@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero"
 import ServiceCard from "@/components/ServiceCard"
 import SectionHeader from "@/components/SectionHeader"
 import CtaSection from "@/components/CtaSection"
+import Link from "next/link"
 
 export default function TherapyPage() {
   const therapyAreas = [
@@ -48,6 +49,49 @@ export default function TherapyPage() {
       description:
         "Pomáhám klientům lépe porozumět svým emocím a efektivně je regulovat. Zaměřuji se na rozvoj dovedností pro zvládání stresu, náročných životních situací a krizí.",
       icon: <Smile className="w-6 h-6" />,
+    },
+  ]
+
+  const faqs = [
+    {
+      question: "Jak probíhá první sezení?",
+      answer:
+        "První sezení je zaměřeno na vzájemné seznámení, zmapování vašich potřeb a očekávání od terapie. Společně stanovíme cíle naší spolupráce a dohodneme se na dalším postupu.",
+    },
+    {
+      question: "Jak často probíhají terapeutická sezení?",
+      answer:
+        "Frekvence sezení závisí na vašich individuálních potřebách. Obvykle se setkáváme jednou týdně nebo jednou za dva týdny, ale můžeme se dohodnout i na jiné frekvenci.",
+    },
+    {
+      question: "Jak dlouho trvá terapie?",
+      answer:
+        "Délka terapie je individuální a závisí na vašich cílech a potřebách. Některé terapie mohou trvat několik týdnů, jiné několik měsíců nebo déle. Pravidelně vyhodnocujeme pokrok a společně rozhodujeme o dalším pokračování.",
+    },
+    {
+      question: "Mohu využít příspěvek od zdravotní pojišťovny?",
+      answer:
+        "V současné době není psychoterapie hrazena zdravotními pojišťovnami. Některé pojišťovny však nabízejí příspěvky na psychoterapii v rámci svých bonusových programů. Doporučuji ověřit možnosti u vaší konkrétní pojišťovny.",
+    },
+    {
+      question: "Jak se mohu objednat?",
+      answer: (
+        <>
+          Objednat se můžete telefonicky na čísle{" "}
+          <a href="tel:+420734474117" className="text-primary hover:underline">
+            +420 734 474 117
+          </a>{" "}
+          nebo e-mailem na{" "}
+          <a href="mailto:terapeutcabalkova@gmail.com" className="text-primary hover:underline">
+            terapeutcabalkova@gmail.com
+          </a>
+          . Můžete také využít{" "}
+          <Link href="/kontakt" className="text-primary hover:underline">
+            kontaktní formulář
+          </Link>{" "}
+          na mých webových stránkách.
+        </>
+      ),
     },
   ]
 
@@ -131,24 +175,41 @@ export default function TherapyPage() {
       {/* Office Image Section */}
       <section className="py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
-          <div className="relative rounded-2xl overflow-hidden shadow-xl">
-            <div className="aspect-[21/9] relative">
+          <div className="relative rounded-2xl overflow-hidden shadow-xl w-fit mx-auto">
+            <div className="relative">
               <Image
-                src="/images/office-interior.png"
-                alt="Terapeutická ordinace"
-                fill
-                className="object-cover"
-                sizes="100vw"
+                src="/images/office-interior.jpg"
+                alt="Terapeutovna"
+                width={800}
+                height={600}
+                className="object-contain max-h-[600px] w-full rounded-lg"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end">
-                <div className="p-8 md:p-12 text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent flex items-end rounded-lg">
+                <div className="bg-black/70 rounded-xl p-8 md:p-12 text-white w-full">
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">Bezpečný prostor pro vaši cestu</h3>
                   <p className="text-lg max-w-2xl">
-                    Terapie probíhá v klidném a příjemném prostředí, kde se můžete cítit bezpečně a uvolněně.
+                    Terapie probíhá v klidném a příjemném prostředí <Link href="/kontakt#kde-me-najdete" className="underline">terapeutovny na Praze 1</Link>, kde se můžete cítit bezpečně a uvolněně.
                   </p>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-6 md:px-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Často kladené otázky</h2>
+
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 card-hover">
+                <h3 className="text-xl font-bold text-gray-800 mb-4">{faq.question}</h3>
+                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

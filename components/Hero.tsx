@@ -34,9 +34,9 @@ const Hero = () => {
         <div className="relative animate-fade-in-delay-1">
           <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl"></div>
-          <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden aspect-[4/5]">
+          <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden aspect-[4/3]">
             <Image
-              src="/images/katerina-portrait.jpeg"
+              src="/images/katerina-portrait.jpg"
               alt="Kateřina Cabalková - psychoterapeutka"
               fill
               className="object-cover object-top"

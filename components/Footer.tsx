@@ -15,6 +15,7 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a
                 href="https://www.facebook.com/terapeutcabalkova"
+                target="_blank" rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-primary transition-colors"
                 aria-label="Facebook"
               >
@@ -28,6 +29,7 @@ const Footer = () => {
               </a>
               <a
                 href="https://www.linkedin.com/in/kate%C5%99ina-cabalkov%C3%A1-b2b57a32b/"
+                target="_blank" rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-primary transition-colors"
                 aria-label="LinkedIn"
               >
@@ -43,9 +45,10 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 text-primary mr-3 mt-0.5" />
-                <a href="https://www.google.com/maps?q=Ostrovn%C3%AD+30,+Praha+1" className="text-gray-600 hover:text-primary transition-colors">
+                <Link href="/kontakt#kde-me-najdete"
+                  className="text-gray-600 hover:text-primary transition-colors">
                   Ostrovní 30, Praha 1
-                </a>
+                </Link>
               </li>
               <li className="flex items-start">
                 <Phone className="w-5 h-5 text-primary mr-3 mt-0.5" />

@@ -33,34 +33,6 @@ export default function PricingPage() {
     },
   ]
 
-  const faqs = [
-    {
-      question: "Jak probíhá první sezení?",
-      answer:
-        "První sezení je zaměřeno na vzájemné seznámení, zmapování vašich potřeb a očekávání od terapie. Společně stanovíme cíle naší spolupráce a dohodneme se na dalším postupu.",
-    },
-    {
-      question: "Jak často probíhají terapeutická sezení?",
-      answer:
-        "Frekvence sezení závisí na vašich individuálních potřebách. Obvykle se setkáváme jednou týdně nebo jednou za dva týdny, ale můžeme se dohodnout i na jiné frekvenci.",
-    },
-    {
-      question: "Jak dlouho trvá terapie?",
-      answer:
-        "Délka terapie je individuální a závisí na vašich cílech a potřebách. Některé terapie mohou trvat několik týdnů, jiné několik měsíců nebo déle. Pravidelně vyhodnocujeme pokrok a společně rozhodujeme o dalším pokračování.",
-    },
-    {
-      question: "Mohu využít příspěvek od zdravotní pojišťovny?",
-      answer:
-        "V současné době není psychoterapie hrazena zdravotními pojišťovnami. Některé pojišťovny však nabízejí příspěvky na psychoterapii v rámci svých bonusových programů. Doporučuji ověřit možnosti u vaší konkrétní pojišťovny.",
-    },
-    {
-      question: "Jak se mohu objednat?",
-      answer:
-        "Objednat se můžete telefonicky na čísle +420 734 474 117 nebo e-mailem na terapeutcabalkova@gmail.com. Můžete také využít kontaktní formulář na mých webových stránkách.",
-    },
-  ]
-
   return (
     <>
       {/* Hero Section */}
@@ -143,22 +115,6 @@ export default function PricingPage() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Často kladené otázky</h2>
-
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 card-hover">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">{faq.question}</h3>
-                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import { Sparkles, Users, CheckCircle2, Brain } from "lucide-react"
 
 export default function AboutPage() {
   const memberships = [
@@ -14,24 +15,29 @@ export default function AboutPage() {
       title: "Autenticita",
       description:
         "Věřím v upřímný a autentický přístup ke klientům. Vytvářím bezpečný prostor, kde můžete být sami sebou bez obav z hodnocení.",
+      icon: <Sparkles className="w-6 h-6 text-primary" />,
     },
     {
       title: "Respekt a partnerství",
       description:
         "Terapii vnímám jako partnerský vztah založený na vzájemném respektu. Společně hledáme cestu k vašim cílům.",
+      icon: <Users className="w-6 h-6 text-primary" />,
     },
     {
       title: "Nehodnotící přístup",
       description:
         "Přistupuji ke každému klientovi bez předsudků a hodnocení. Vytvářím prostředí, kde se můžete cítit přijímáni takoví, jací jste.",
+      icon: <CheckCircle2 className="w-6 h-6 text-primary" />,
     },
     {
       title: "Zážitková terapie",
       description: "Využívám metody zážitkové terapie, které pomáhají hlubšímu porozumění a efektivnější změně.",
+      icon: <Brain className="w-6 h-6 text-primary" />,
     },
     {
       title: "Důvěrnost",
       description: "Respektuji vaše soukromí a zachovávám naprostou důvěrnost všech informací sdílených během terapie.",
+      icon: <CheckCircle2 className="w-6 h-6 text-primary" />,
     },
   ]
 
@@ -50,12 +56,12 @@ export default function AboutPage() {
           <div className="relative animate-fade-in-delay-1">
             <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl"></div>
-            <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden aspect-square">
+            <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden aspect-[4/3]">
               <Image
-                src="/images/katerina-portrait.jpeg"
+                src="/images/about-katerina.jpg"
                 alt="Kateřina Cabalková - psychoterapeutka"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
@@ -71,38 +77,42 @@ export default function AboutPage() {
           <div className="space-y-8">
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
               <h3 className="text-xl font-bold text-gray-800 mb-4">Vzdělání</h3>
-              <p className="text-gray-700 mb-4">
-                Vystudovala jsem obor Sociální politika a sociální práce na Univerzitě Karlově, nyní pokračuji
-                doktorským studiem. Úspěšně jsem ukončila psychoterapeutický výcvik Transformační systemické terapie
-                vedený Společností transformační systemické terapie V. Satirové ČR, výcvik v Dialekticko behaviorální
-                terapii - British Isles DBT Training, Základní krizovou intervenci vedenou REMEDIEM Praha, Výcvik v
-                motivačních rozhovorech vedený PhDr. Janem Soukupem, Ph.D. a mnoho dalších menších vzdělávacích a
-                zážitkových kurzů, dobrovolných stáží, seminářů a odborných sympozií.
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Vystudovala jsem obor <strong>Sociální politika a sociální práce</strong> na Univerzitě Karlově, nyní pokračuji
+                doktorským studiem.<br />
+                Úspěšně jsem ukončila následujících psychoterapeutických výcviků a kurzů:
               </p>
-              <p className="text-gray-700">
+              <ul className="list-disc list-inside text-gray-700 leading-relaxed mb-4 space-y-1 pl-4">
+                <li><strong>Transformační systemická terapie</strong> vedený Společností transformační systemické terapie Virginie Satirové ČR</li>
+                <li>Výcvik v <strong>Dialekticko behaviorální terapii</strong> - British Isles DBT Training</li>
+                <li>Základní <strong>krizovou intervenci</strong> vedenou REMEDIEM Praha</li>
+                <li>Výcvik v <strong>motivačních rozhovorech</strong> vedený PhDr. Janem Soukupem, Ph.D.</li>
+                <li>Mnoho dalších menších vzdělávacích a zážitkových kurzů, dobrovolných stáží, seminářů a odborných sympozií.</li>
+              </ul>
+              <p className="text-gray-700 leading-relaxed mb-4">
                 Ráda hledám rozmanitost, která se hezky zrcadlí i do mých terapeutických zkušeností. Kontinuálně se
-                vzdělávám a ve své praxi kombinuji celou řadu terapeutických metod. Mám výcvik v systemické rodinné
-                terapii a vedle toho v DBT terapii, jež vychází z principů kognitivně behaviorální terapie. Ta metody
-                KBT dále rozšiřuje a specializuje je pro lidi s vysokou emoční citlivostí.
+                vzdělávám a ve své praxi kombinuji celou řadu terapeutických metod. Mám výcvik v <strong>systemické rodinné
+                terapii</strong> a vedle toho v <strong>DBT terapii</strong>, jež vychází z principů <strong>kognitivně behaviorální terapie</strong>. Ta metody
+                KBT dále rozšiřuje a specializuje je pro lidi s <strong>vysokou emoční citlivostí</strong>.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
               <h3 className="text-xl font-bold text-gray-800 mb-4">Profesní zkušenosti</h3>
-              <p className="text-gray-700 mb-4">
-                Od roku 2019 se věnuji klientům v soukromé praxi, ale mám zkušenost i s prací ve službách sociálního a
-                školského resortu.
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Od roku 2019 se věnuji klientům v <strong>soukromé praxi</strong>, ale mám zkušenost i s prací ve službách <strong>sociálního a
+                školského resortu</strong>.
               </p>
-              <p className="text-gray-700 mb-4">
-                Během studia mne zájem o sebepoznání a péče o duševní pohodu studentů přivedl k založení Poradenského
-                centra Hybernská pod Filozofickou fakultou Univerzity Karlovy. Pracuji s lidmi potýkající se s Hraniční
-                poruchou osobnosti v DBT centru organizace Kaleidoskop. Pracovala jsem jako terapeut projektu Stop
-                násilí SOS centra organizace Diakonie. Vzdělávala jsem a terapeuticky pracovala se studenty Univerzity
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Během studia mne zájem o <strong>sebepoznání</strong> a péče o duševní pohodu studentů přivedl k založení <strong>Poradenského
+                centra Hybernská</strong> pod Filozofickou fakultou Univerzity Karlovy. Pracuji s lidmi potýkající se s <strong>Hraniční
+                poruchou osobnosti</strong> v <strong>DBT centru</strong> organizace Kaleidoskop. Pracovala jsem jako terapeut projektu <strong>Stop
+                násilí</strong> SOS centra organizace Diakonie. Vzdělávala jsem a terapeuticky pracovala se studenty Univerzity
                 Karlovy.
               </p>
-              <p className="text-gray-700">
-                Aktuálně spolupracuji s poradenským centrem Vysoké školy ekonomie a managementu a týmem Instututu
-                moderní láska.
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Aktuálně spolupracuji s <strong>poradenským centrem Vysoké školy ekonomie a managementu</strong> a týmem <strong>Instytutu
+                moderní láska</strong>.
               </p>
             </div>
 
@@ -127,15 +137,7 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <div key={index} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 card-hover">
                 <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <svg
-                    className="w-6 h-6 text-primary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
+                  {value.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-4">{value.title}</h3>
                 <p className="text-gray-700">{value.description}</p>

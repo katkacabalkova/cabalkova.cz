@@ -96,13 +96,15 @@ export default function ForCompaniesPage() {
       <PageHero
         title="Pro firmy a vzdělávání"
         image={
-          <Image
-            src="/images/corporate-workshop.png"
-            alt="Firemní workshop"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
+          <div className="relative aspect-[4/3] overflow-hidden">
+            <Image
+              src="/images/talk-with-katerina.jpg"
+              alt="Firemní workshop"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
         }
       >
         <p className="text-xl text-gray-700 max-w-3xl mb-8">
